@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Movie Recieved";
+}
+@model MovieApp_kncook.Models.ApplicationResponse
+
+@if (Model.Title == "Bad Movie")
+{
+    <h2>Why would you add a @Model.Title?</h2>
+}
+else
+{
+    <h2>Movie Recieved. Thank you for adding @Model.Title.</h2>
+}
