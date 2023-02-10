@@ -29,8 +29,8 @@ namespace MovieApp_kncook.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Edited")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("Edited")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LentTo")
                         .HasColumnType("TEXT");
@@ -57,8 +57,8 @@ namespace MovieApp_kncook.Migrations
                             ApplicationId = 1,
                             Category = "Comedy",
                             Director = "Ben Stiller",
-                            Edited = "yes",
-                            LentTo = "Kat",
+                            Edited = true,
+                            LentTo = "Luke",
                             Note = "so funny",
                             Rating = "PG13",
                             Title = "Zoolander"
@@ -68,7 +68,7 @@ namespace MovieApp_kncook.Migrations
                             ApplicationId = 2,
                             Category = "Drama/Adventure",
                             Director = "Mitch Davis",
-                            Edited = "no",
+                            Edited = false,
                             LentTo = "church",
                             Note = "inspirational",
                             Rating = "PG",
@@ -79,7 +79,7 @@ namespace MovieApp_kncook.Migrations
                             ApplicationId = 3,
                             Category = "Romance/Comedy",
                             Director = "Anne Fletcher",
-                            Edited = "yes",
+                            Edited = true,
                             LentTo = "Katherine",
                             Note = "My favorite movie",
                             Rating = "PG13",

@@ -22,7 +22,7 @@ namespace MovieApp_kncook.Models
         /*prop tab tab will build this line of code for you*/
         public string Rating { get; set; } /*byte is a smaller amount of int allowed*/
         /*use a dropdown menu (G, PG, PG-13, R)*/
-        public string Edited { get; set; }
+        public bool Edited { get; set; }
         /*“Edited”, “Lent To”, and “Notes” are all OPTIONAL*/
         public string LentTo { get; set; }
         [StringLength(25, ErrorMessage ="Notes must be between 0-25 charachters.")]

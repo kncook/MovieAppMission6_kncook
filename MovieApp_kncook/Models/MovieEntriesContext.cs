@@ -29,8 +29,8 @@ namespace MovieApp_kncook.Models
                     Title = "Zoolander",
                     Director = "Ben Stiller",
                     Rating = "PG13",
-                    Edited = "yes",
-                    LentTo = "Kat",
+                    Edited = true,
+                    LentTo = "Luke",
                     Note = "so funny"
                 },
 
@@ -41,7 +41,7 @@ namespace MovieApp_kncook.Models
                     Title = "The Other Side of Heaven",
                     Director = "Mitch Davis",
                     Rating = "PG",
-                    Edited = "no",
+                    Edited = false,
                     LentTo = "church",
                     Note = "inspirational"
                 },
@@ -52,7 +52,7 @@ namespace MovieApp_kncook.Models
                     Title = "The Proposal",
                     Director = "Anne Fletcher",
                     Rating = "PG13",
-                    Edited = "yes",
+                    Edited = true,
                     LentTo = "Katherine",
                     Note = "My favorite movie"
                 }

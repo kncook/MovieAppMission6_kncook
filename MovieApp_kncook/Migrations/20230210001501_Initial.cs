@@ -16,7 +16,7 @@ namespace MovieApp_kncook.Migrations
                     Title = table.Column<string>(nullable: false),
                     Director = table.Column<string>(nullable: false),
                     Rating = table.Column<string>(nullable: false),
-                    Edited = table.Column<string>(nullable: true),
+                    Edited = table.Column<bool>(nullable: false),
                     LentTo = table.Column<string>(nullable: true),
                     Note = table.Column<string>(maxLength: 25, nullable: true)
                 },
@@ -28,17 +28,17 @@ namespace MovieApp_kncook.Migrations
             migrationBuilder.InsertData(
                 table: "responses",
                 columns: new[] { "ApplicationId", "Category", "Director", "Edited", "LentTo", "Note", "Rating", "Title" },
-                values: new object[] { 1, "Comedy", "Ben Stiller", "yes", "Kat", "so funny", "PG13", "Zoolander" });
+                values: new object[] { 1, "Comedy", "Ben Stiller", true, "Luke", "so funny", "PG13", "Zoolander" });
 
             migrationBuilder.InsertData(
                 table: "responses",
                 columns: new[] { "ApplicationId", "Category", "Director", "Edited", "LentTo", "Note", "Rating", "Title" },
-                values: new object[] { 2, "Drama/Adventure", "Mitch Davis", "no", "church", "inspirational", "PG", "The Other Side of Heaven" });
+                values: new object[] { 2, "Drama/Adventure", "Mitch Davis", false, "church", "inspirational", "PG", "The Other Side of Heaven" });
 
             migrationBuilder.InsertData(
                 table: "responses",
                 columns: new[] { "ApplicationId", "Category", "Director", "Edited", "LentTo", "Note", "Rating", "Title" },
-                values: new object[] { 3, "Romance/Comedy", "Anne Fletcher", "yes", "Katherine", "My favorite movie", "PG13", "The Proposal" });
+                values: new object[] { 3, "Romance/Comedy", "Anne Fletcher", true, "Katherine", "My favorite movie", "PG13", "The Proposal" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
