@@ -20,12 +20,12 @@ namespace MovieApp_kncook.Controllers
             _logger = logger;
             MovieEntriesContext = tempName;
         }
-
+        /*directs to the home/index page*/
         public IActionResult Index()
         {
             return View();
         }
-
+        /*directs to the adding a movie page*/
         [HttpGet]
         public IActionResult MovieApplication()
         {
@@ -35,7 +35,7 @@ namespace MovieApp_kncook.Controllers
 
         [HttpPost]
         public IActionResult MovieApplication (ApplicationResponse ar)
-        {
+        {/*model needs to be valid in order to return the confirmation page*/
             if (ModelState.IsValid)
             {
                 MovieEntriesContext.Add(ar);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MovieApp_kncook.Models
 {
     public class ApplicationResponse
-    {
+    {   //these add messages if the user does not input the correct input amount/ what is required
         //IN order to run migrations you need to have an ID
         [Key]
         [Required]

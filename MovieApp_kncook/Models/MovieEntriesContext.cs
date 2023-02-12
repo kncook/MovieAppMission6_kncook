@@ -21,7 +21,7 @@ namespace MovieApp_kncook.Models
         protected override void OnModelCreating(ModelBuilder mb)
         {
             mb.Entity<ApplicationResponse>().HasData(
-
+                //seeding data in the database
                 new ApplicationResponse
                 {
                     ApplicationId = 1,
