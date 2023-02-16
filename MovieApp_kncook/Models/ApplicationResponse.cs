@@ -16,6 +16,7 @@ namespace MovieApp_kncook.Models
         public string Category { get; set; }
         [Required(ErrorMessage = "You must add a Title")]
         public string Title { get; set; }
+        public int ?Year { get; set; }
         [Required(ErrorMessage = "You must add a Director")]
         public string Director { get; set; }
         [Required(ErrorMessage = "You must add a Rating")]
