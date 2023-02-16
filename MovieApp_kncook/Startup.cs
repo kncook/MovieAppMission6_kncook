@@ -58,6 +58,7 @@ namespace MovieApp_kncook
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    /*this question mark after id makes it optional. If you did applcationid on both this file and tabledata then it would also just return the #*/
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }

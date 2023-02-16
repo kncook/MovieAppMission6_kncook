@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Movie Data";
+}
+@*a list of a whole bunch of application responses*@
+@model List<ApplicationResponse>
+
+@*headings for the table*@
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Category</td>
+            <td>Title</td>
+            <td>Year</td>
+            <td>Director</td>
+            <td>Rating</td>
+            <td>Edited</td>
+            <td>Lent To</td>
+            <td>Note</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @*for loop to displya all the data, pulling from the model*@
+        @foreach (var x in Model)
+            {
+        <tr>
+            @*in each table row we are putting a row w/ associated data*@
+            <td>@x.Category.CategoryName</td>
+            <td>@x.Title</td>
+            <td>@x.Year</td>
+            <td>@x.Director</td>
+            <td>@x.Rating</td>
+            <td>@x.Edited</td>
+            <td>@x.LentTo</td>
+            <td>@x.Note</td>
+
+            @*allows you to edit/ delete repsonses and the -id can also be -applicationid but now it will return less in the https*@
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-applicationid="@x.ApplicationId">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.ApplicationId">Delete</a></td>
+        </tr>
+            }
+    </tbody>
+</table>

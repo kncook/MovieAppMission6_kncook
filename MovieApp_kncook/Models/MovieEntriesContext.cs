@@ -16,17 +16,33 @@ namespace MovieApp_kncook.Models
 
         }
         //USE dBSET to store the info //APP response is name of file
-        public DbSet<ApplicationResponse> responses { get; set; }
+        //queries out and pulls the data
+        public DbSet<ApplicationResponse> Responses { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
-        {
+        { //will list out all the categories
+            mb.Entity<Category>().HasData(
+                new Category { CategoryId = 1, CategoryName = "Action/Adventure" },
+                new Category { CategoryId = 2, CategoryName = "Comedy" },
+                new Category { CategoryId = 3, CategoryName = "Drama" },
+                new Category { CategoryId = 4, CategoryName = "Family" },
+                new Category { CategoryId = 5, CategoryName = "Horror/Suspense" },
+                new Category { CategoryId = 6, CategoryName = "Miscellaneous" },
+                new Category { CategoryId = 7, CategoryName = "Television" },
+                new Category { CategoryId = 8, CategoryName = "VHS" }
+
+                );
+            
+
             mb.Entity<ApplicationResponse>().HasData(
                 //seeding data in the database
                 new ApplicationResponse
                 {
                     ApplicationId = 1,
-                    Category = "Comedy",
+                    CategoryId = 2,
                     Title = "Zoolander",
+                    Year = 2001,
                     Director = "Ben Stiller",
                     Rating = "PG13",
                     Edited = true,
@@ -37,8 +53,9 @@ namespace MovieApp_kncook.Models
                 new ApplicationResponse
                 {
                     ApplicationId = 2,
-                    Category = "Drama/Adventure",
+                    CategoryId = 4,
                     Title = "The Other Side of Heaven",
+                    Year = 2001,
                     Director = "Mitch Davis",
                     Rating = "PG",
                     Edited = false,
@@ -48,8 +65,9 @@ namespace MovieApp_kncook.Models
                 new ApplicationResponse
                 {
                     ApplicationId = 3,
-                    Category = "Romance/Comedy",
+                    CategoryId = 2,
                     Title = "The Proposal",
+                    Year = 2009,
                     Director = "Anne Fletcher",
                     Rating = "PG13",
                     Edited = true,

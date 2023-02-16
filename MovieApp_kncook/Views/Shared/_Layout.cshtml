@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     @*this page is the base html page what is seen here is seen eveyrwhere else*@
-    @*this website contains a dtaset where you can add data of movies for professor hiltons brother. It has a picture of him as well and links to a podcast page*@
+    @*this website contains a dtaset where you can add data of movies for professor hiltons brother. It has a picture of him as well and links to a podcast page
+        It also lists all the movie data in a table where  auser can edit and delete data from it.*@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MovieApp_kncook</title>
@@ -13,8 +14,9 @@
     <nav>
         <a asp-controller="Home" asp-action="Index">Home | </a>
         <a asp-controller="Home" asp-action="MovieApplication">Add Movie | </a>
-        <a asp-controller="Home" asp-action="Podcast">Podcasts</a>
-     
+        <a asp-controller="Home" asp-action="Podcast">Podcasts | </a>
+        <a asp-controller="Home" asp-action="TableData">View Movies</a>
+        
     </nav>
     <div>
         @RenderBody()
