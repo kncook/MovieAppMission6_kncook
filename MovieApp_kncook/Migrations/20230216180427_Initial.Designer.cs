@@ -9,7 +9,7 @@ using MovieApp_kncook.Models;
 namespace MovieApp_kncook.Migrations
 {
     [DbContext(typeof(MovieEntriesContext))]
-    [Migration("20230216170751_Initial")]
+    [Migration("20230216180427_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
