@@ -12,8 +12,8 @@ namespace MovieApp_kncook.Models
         [Key]
         [Required]
         public int ApplicationId { get; set; }
-        [Required(ErrorMessage = "You must add a Category")]
 
+        [Required(ErrorMessage = "You must add a Category")]
         /*builds foreign key relationship*/
         public int CategoryId { get; set; }
         /*first listed out primary key from other table ^ and now listing out instance of that type of data*/
@@ -21,8 +21,10 @@ namespace MovieApp_kncook.Models
         
         [Required(ErrorMessage = "You must add a Title")]
         public string Title { get; set; }
+        
+        public int ?Year { get; set; }
+
         [Required(ErrorMessage = "You must add a Director")]
-        public int Year { get; set; }
         public string Director { get; set; }
         [Required(ErrorMessage = "You must add a Rating")]
         /*prop tab tab will build this line of code for you*/
